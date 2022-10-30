@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+project(cpp_convnet)
+find_package(Torch REQUIRED)
+find_package(OpenCV REQUIRED)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
+add_executable(cpp_convnet cpp_convnet.cpp)
+target_link_libraries(cpp_convnet pthread)
+target_link_libraries(cpp_convnet ${TORCH_LIBRARIES} ${OpenCV_LIBS})
+set_property(TARGET cpp_convnet PROPERTY CXX_STANDARD 14)
