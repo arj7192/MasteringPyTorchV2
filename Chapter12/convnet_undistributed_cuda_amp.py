@@ -51,8 +51,9 @@ def train(args):
     for epoch in range(args.epochs):
         for b_i, (X, y) in enumerate(train_dataloader):
             X, y = X.to(device), y.to(device)
-            pred_prob = model(X)
-            loss = F.nll_loss(pred_prob, y) # nll is the negative likelihood loss
+            with torch.cuda.amp.autocast():
+                pred_prob = model(X)
+                loss = F.nll_loss(pred_prob, y) # nll is the negative likelihood loss
             loss.backward()
             optimizer.step()
             optimizer.zero_grad()
@@ -72,3 +73,4 @@ def main():
     
 if __name__ == '__main__':
     main()
+
