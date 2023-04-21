@@ -8,6 +8,9 @@ from torchvision import datasets, transforms
 import time
 import argparse
 
+torch.manual_seed(0)
+device = torch.device("cpu")
+
 
 class ConvNet(nn.Module):
     def __init__(self):
@@ -36,8 +39,6 @@ class ConvNet(nn.Module):
     
     
 def train(args):
-    torch.manual_seed(0)
-    device = torch.device("cpu")
     train_dataloader = torch.utils.data.DataLoader(
         datasets.MNIST('../data', train=True, download=True,
                        transform=transforms.Compose([
