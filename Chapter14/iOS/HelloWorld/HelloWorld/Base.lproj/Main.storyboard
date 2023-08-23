@@ -40,13 +40,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nI-t6-b6S">
-                                <rect key="frame" x="165" y="752" width="85" height="35"/>
+                                <rect key="frame" x="152" y="559" width="110" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Capture"/>
                                 <connections>
                                     <action selector="captureButtonTapped:" destination="bcn-4C-CCs" eventType="touchUpInside" id="k6c-qy-mSa"/>
-                                    <segue destination="2WL-LC-Hwy" kind="show" identifier="showImagePreview" id="WoU-CE-slY"/>
+                                    <segue destination="2WL-LC-Hwy" kind="showDetail" identifier="showImagePreview" id="bzw-RY-vzP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,14 +61,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJ4-yf-Ou8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1091" y="138"/>
+            <point key="canvasLocation" x="1089.8550724637682" y="137.94642857142856"/>
         </scene>
         <!--Preview View Controller-->
         <scene sceneID="9Cj-H6-4Rs">
             <objects>
                 <viewController id="2WL-LC-Hwy" customClass="PreviewViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oyU-tZ-ILm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k3X-sv-FHS">
@@ -76,7 +76,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NhW-bQ-YEU">
-                                <rect key="frame" x="87" y="606" width="240" height="128"/>
+                                <rect key="frame" x="87" y="524" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
