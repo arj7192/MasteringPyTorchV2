@@ -37,7 +37,7 @@ class PreviewViewController: UIViewController {
             return
         }
 
-//        print("Raw Predictions: \(outputs)") // Print the raw predictions array
+        print("Raw Predictions: \(outputs)") // Print the raw predictions array
         
         // Find the index of the maximum value in the outputs array
         if let maxIndex = outputs.indices.max(by: { outputs[$0].floatValue < outputs[$1].floatValue }) {

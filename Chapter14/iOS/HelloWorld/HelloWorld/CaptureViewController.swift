@@ -71,21 +71,25 @@ class CaptureViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         
 //        print("Image Size: \(imageSize)")
 //        print("Preview Size: \(previewSize)")
+//        print("Preview Size width: \(previewSize.width)")
+//        print("Preview Size height: \(previewSize.height)")
 //        print("Preview X: \(frame.origin.x)")
 //        print("Preview Y: \(frame.origin.y)")
 //        print("X Scale: \(xScale)")
 //        print("Y Scale: \(yScale)")
+//        print("scale: \(scale)")
+        
 
         // Calculate the crop rect based on the visible portion of the preview layer
         let cropRect = CGRect(
-            x: frame.origin.x,
-            y: frame.origin.y,
+            x: -frame.origin.x * xScale,
+            y: 0,
             width: previewSize.width * xScale,
-            height: previewSize.height * yScale
+            height: previewSize.height * xScale
         )
 
         if let cgImage = image.cgImage?.cropping(to: cropRect) {
-            return UIImage(cgImage: cgImage, scale: scale, orientation: image.imageOrientation)
+            return UIImage(cgImage: cgImage, scale: 1, orientation: image.imageOrientation)
         }
 
         return nil
