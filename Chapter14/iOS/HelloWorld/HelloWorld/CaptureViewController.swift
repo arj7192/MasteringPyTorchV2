@@ -69,12 +69,12 @@ class CaptureViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         let xScale = imageSize.width / previewSize.width
         let yScale = imageSize.height / previewSize.height
         
-        print("Image Size: \(imageSize)")
-        print("Preview Size: \(previewSize)")
-        print("Preview X: \(frame.origin.x)")
-        print("Preview Y: \(frame.origin.y)")
-        print("X Scale: \(xScale)")
-        print("Y Scale: \(yScale)")
+//        print("Image Size: \(imageSize)")
+//        print("Preview Size: \(previewSize)")
+//        print("Preview X: \(frame.origin.x)")
+//        print("Preview Y: \(frame.origin.y)")
+//        print("X Scale: \(xScale)")
+//        print("Y Scale: \(yScale)")
 
         // Calculate the crop rect based on the visible portion of the preview layer
         let cropRect = CGRect(
