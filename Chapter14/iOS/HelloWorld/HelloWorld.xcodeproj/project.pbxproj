@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A0497B682352FFA000D70E9E /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = A0497B672352FFA000D70E9E /* image.png */; };
 		A07753C62343DDEE00186969 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07753C52343DDEE00186969 /* AppDelegate.swift */; };
 		A07753CA2343DDEE00186969 /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07753C92343DDEE00186969 /* CaptureViewController.swift */; };
 		A07753CD2343DDEE00186969 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07753CB2343DDEE00186969 /* Main.storyboard */; };
@@ -18,8 +17,6 @@
 		A5D2E53DD86D8B44A9BC06B2 /* libPods-HelloWorld.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B580928A4CCA71E14D80F9 /* libPods-HelloWorld.a */; };
 		FD2A8B412A95508F00553453 /* model.pt in Resources */ = {isa = PBXBuildFile; fileRef = FD2A8B402A95508F00553453 /* model.pt */; };
 		FDAF33212A941382009418E5 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF33202A941382009418E5 /* PreviewViewController.swift */; };
-		FDAF33302A953D98009418E5 /* model1.pt in Resources */ = {isa = PBXBuildFile; fileRef = FDAF332E2A953D98009418E5 /* model1.pt */; };
-		FDAF33312A953D98009418E5 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = FDAF332F2A953D98009418E5 /* words.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -193,9 +190,6 @@
 				A07753CF2343DDEF00186969 /* Assets.xcassets in Resources */,
 				FD2A8B412A95508F00553453 /* model.pt in Resources */,
 				A07753CD2343DDEE00186969 /* Main.storyboard in Resources */,
-				A0497B682352FFA000D70E9E /* image.png in Resources */,
-				FDAF33312A953D98009418E5 /* words.txt in Resources */,
-				FDAF33302A953D98009418E5 /* model1.pt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
