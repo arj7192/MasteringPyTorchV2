@@ -12,7 +12,6 @@ import os
 import time
 import argparse
 
-
 class ConvNet(nn.Module):
     def __init__(self):
         super(ConvNet, self).__init__()
@@ -37,10 +36,9 @@ class ConvNet(nn.Module):
         x = self.fc2(x)
         op = F.log_softmax(x, dim=1)
         return op
-     
 
 def train(gpu_num, args):
-    rank = args.machine_id * args.num_processes + gpu_num                        
+    rank = args.machine_id * args.num_gpu_processes + gpu_num                        
     dist.init_process_group(                                   
     backend='nccl',                                         
     init_method='env://',                                   
@@ -84,8 +82,7 @@ def train(gpu_num, args):
                 print('epoch: {} [{}/{} ({:.0f}%)]\t training loss: {:.6f}'.format(
                     epoch, b_i, len(train_dataloader),
                     100. * b_i / len(train_dataloader), loss.item()))
-         
-            
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--num-machines', default=1, type=int,)
@@ -101,6 +98,6 @@ def main():
     start = time.time()
     mp.spawn(train, nprocs=args.num_gpu_processes, args=(args,))
     print(f"Finished training in {time.time()-start} secs")
-    
+
 if __name__ == '__main__':
     main()
