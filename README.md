@@ -24,7 +24,7 @@ This deep learning with PyTorch book is for data scientists, machine learning en
 # Notebooks in each chapter
 
 
-The following are links for the notebooks associated with each chapter. The first column in the table gives the chapter. The 2nd column gives the link to the resource (notebook or utility script) in the book repository. 
+You can run the notebooks directly from the table below: 
 
 | Chapter no. |Chapter title | Notebook/Utility Script (GitHub) | Open in Kaggle | Open in Colab
 |:-- |:-- | :-------- | :-------- |  :-------- |
